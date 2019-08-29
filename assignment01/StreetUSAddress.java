@@ -4,7 +4,7 @@ package assignment01;
  * @author CS 140
  *
  */
-public class StreetUSAddress {
+public class {
 	private String addressLine1;
 	private String addressLine2;
 	private String city;
@@ -14,44 +14,54 @@ public class StreetUSAddress {
 	public StreetUSAddress(String address1, 
 			String address2, String cty, 
 			String state, String zip) {
-      //TODO use the parameters to set the values of 
-      //the fields above
+		addressLine1 = address1; 
+		addressLine2 = address2; 
+		city = cty; 
+		stateAbbreviation = state; 
+		zipCode = zip; 	
 	}
+
 	/**
 	 * 
 	 * @return
 	 */
 	public String getAddressLine1() {
-    // TODO return the appropriate String
+		return addressLine1; 
 	}
+	
+
 	/**
 	 * 
 	 * @return
 	 */
 	public String getAddressLine2() {
-    // TODO return the appropriate String
+   		return addressLine2; 
 	}
+	
 	/**
 	 * 
 	 * @return
 	 */
 	public String getCity() {
-    // TODO return the appropriate String
+		return city; 
 	}
 	/**
 	 * 
 	 * @return
 	 */
+	
 	public String getStateAbbreviation() {
-    // TODO return the appropriate String
+    		return stateAbbreviation; 
 	}
 	/**
 	 * 
 	 * @return
 	 */	
+	
 	public String getZipCode() {
-    // TODO return the appropriate String
+    		return zipCode; 
 	}
+
 	@Override
 	public String toString() {
 		if(addressLine2.trim().length() > 0) {

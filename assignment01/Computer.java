@@ -6,6 +6,7 @@ package assignment01;
  * @author CS 140
  *
  */
+
 public class Computer {
 	private String brand;
 	private String cpuDescription;
@@ -94,4 +95,5 @@ public class Computer {
 		return String.format(brand + ", " + cpuDescription + ", " + ramGB + "GB Memory, "
 					+ diskStr + "Price: $%.2f ", purchasePrice); 
 	}
+
 }

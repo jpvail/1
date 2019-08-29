@@ -1,5 +1,5 @@
 package assignment01;
-
+import java.time.LocalDate;
 /**
  * 
  * @author CS 140
@@ -62,7 +62,26 @@ public class Person {
 		return String.format("%03d-%02d-%04d", ssn/1000000,ssn%1000000/10000, ssn%10000); 
 
 	}
-// TODO provide the getter methods for placeDob and address 
+
+	
+	// Getter method for placeDob 
+	public DateAndPlaceOfBirth getplaceDob(){
+		return placeDob; 
+	
+	}
+
+	// Getter method for address 
+	public StreetUSAddress getAddress(){
+		return address; 
+	
+	}
+/**
+*	public String toString() {
+*		return "Computer List, Owner: " + owner + "\nComputers: " + computers;
+*	}
+*/
+
+
 // TODO Override the public String toString() method that is similar to the 
 // toString of the StreetUSAddress class and will print a person as:
 // Jane Doe (111-22-3333), 
@@ -70,4 +89,49 @@ public class Person {
 // 123 Main Street
 // Apt 1B
 // Binghamton, NY 13905
+
+	/**
+	 * @param string firstNames
+	 * @param string lastNames
+	 * @param int ssn
+	 * @param DateAndPlaceOfBirth placeDob
+	 * @param StreetUSAddress address
+	 */
+
+
+	public String toString() {
+
+		String address1 = address.getAddressLine1(); 
+		String address2 = address.getAddressLine2(); 
+		String city = address.getCity();
+		String state = address.getStateAbbreviation();
+		String zip = address.getZipCode();
+		LocalDate DOB = placeDob.getDateOfBirth();
+		String placeOfBirth = placeDob.getPlaceOfBirth(); 
+
+
+		return String.format(firstNames + " " + lastNames + " (" + this.getSSN() + ")," + "\n" + "Date and place of birth: " 
+		+ DOB + ", " + placeOfBirth + "\n" + address1 + "\n" + address2 + "\n" + city + ", " + state + " " + zip); 
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
